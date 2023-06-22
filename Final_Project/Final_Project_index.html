@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lange="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devic-width">
+        <title>Matt Keefer</title>
+        <link rel="stylesheet" type="text/css" href="./CSS/final_css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="background">
+
+        <!--NAV BAR-->
+        <div class="navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND FIRST HEADING-->
+        <br>
+        <br>
+
+        <!--BACKGROUND VIDEO/HOME-->
+        <div id="Home">
+            <video autoplay muted loop id="background_video">
+                <source src="./Video/gaming_background.mp4">
+                <!--ALT MESSAGE-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--VIDEO TEXT-->
+        <div class="video_text">
+            <h1 class="white-text">Matt Keefer's Portfolio</h1> <!--May need to change color from white-> something in the red/black/white shcema-->
+            <strong>
+                <p class="center">
+                    <q>It should be the experience, that is touching.
+                        <br>White I strive for is to make the person playing the game
+                        <br>the director.
+                    </q>
+                    <br>-Shigeru Miyamoto
+                    <br>
+                    <br>My name is Matt Keefer.  Welcome to my portfolio website.  On it I will tell you about my background and experience.
+                    <br>
+                    <br>Thank you for dropping in and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--ABOUT SECTION-->
+        <div class="row" id="About">
+            <!--LEFT COLUMN-->
+            <div class="column_2">
+                <img src="./Images/Masters_grad.jpg" alt="Master's Graduation">
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>
+                    I am a game developer who loves to code!  I enjoy spending time with my family, my dog Buttercup, and coaching wrestling!
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Game Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, C#, C++ and more.  I have experience working within both the Unity and Unreal gaming engines.
+                    <br>
+                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GITHUB SECTION-->
+        <div class="row" id="GitHub">
+            <!--LEFT COLUMN-->
+            <div class="column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/Keefer184" targe="_blank">Keefer184 GitHub</a></p>
+                </p>
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column_2">
+                <a href="https://github.com/Keefer184" target="_blank"><img src="./Images/github_3.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--CONTACT SECTION-->
+        <div class="row" id="Contact">
+            <!--CONTACT IMAGE, LEFT COLUMN-->
+            <div class="column_2 column_tall">
+                <img src="./Images/Contact.jpg" alt="Contact Image">
+            </div>
+            <!--CONTACT FORM, RIGHT COLUMN-->
+            <div class="column_1 column_tall">
+                <h1>Contact</h1>
+                <form action="https://formspree.io/f/mdovqrbl" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--FOOTER SECTION-->
+        <footer>
+            <p>
+                <p class="center">&copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
