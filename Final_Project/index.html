@@ -15,9 +15,10 @@
         <!--NAV BAR-->
         <div class="navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND FIRST HEADING-->
@@ -51,6 +52,58 @@
             </strong>
         </div>
 
+        <!--SLIDESHOW-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!--Slides-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/profile-pic.jpg" alt="Self-Pic">
+                        <div class="text">I am available to assist you on your project!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS and JS logos">
+                        <div class="text">Game developer and full-stack software developer, <br>trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/Python.png" alt="Python logo">
+                        <div class="text">the popular programmin language Python,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/C.png" alt="C# and C++ logo">
+                        <div class="text">Unity Engine with C#, Unreal Engine with C++,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/SQL_and_Database.jpg" alt="SQL">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/code.jpg" alt="Coding Logo">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+
+                    <!--CONTROLS-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <!--SLIDESHOW DOTS-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
         <!--ABOUT SECTION-->
         <div class="row" id="About">
             <!--LEFT COLUMN-->
@@ -60,7 +113,7 @@
             <!--RIGHT COLUMN-->
             <div class="column_1">
                 <h1>About</h1>
-                <p>
+                <p id="long_text">
                     I am a game developer who loves to code!  I enjoy spending time with my family, my dog Buttercup, and coaching wrestling!
                     <br>
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Game Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, C#, C++ and more.  I have experience working within both the Unity and Unreal gaming engines.
@@ -88,22 +141,23 @@
         </div>
 
         <!--CONTACT SECTION-->
-        <div class="row" id="Contact">
-            <!--CONTACT IMAGE, LEFT COLUMN-->
-            <div class="column_2 column_tall">
-                <img src="./Images/Contact.jpg" alt="Contact Image">
-            </div>
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
             <!--CONTACT FORM, RIGHT COLUMN-->
-            <div class="column_1 column_tall">
-                <h1>Contact</h1>
-                <form action="https://formspree.io/f/mdovqrbl" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mdovqrbl" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name">Name:</label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone">Phone:</label>
+                        <input type="text" placeholder="Please provide your phone number" name="phone">
+                    <label for="email">Email:</label>
+                        <input type="text" name="email" placeholder="Please enter your email here" required>
+                    <label for="message">Message:</label>
+                        <input type="text" name="message" placeholder="Please write your message here">
+                    
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -115,5 +169,6 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/final_js.js" type="text/javascript"></script>
     </body>
 </html>
