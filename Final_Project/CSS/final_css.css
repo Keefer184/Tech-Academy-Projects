@@ -256,7 +256,7 @@ form h1 {
     animation: movePopup 5s;
 }
 
-@keyFrames movePopup{
+@keyframes movePopup{
     from{right: -40vw;}
     to {right: 1.75vw;}
 }
